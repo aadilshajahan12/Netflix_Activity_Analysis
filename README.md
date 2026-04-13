@@ -1,4 +1,5 @@
 📊 Netflix Activity Analysis
+
 An interactive Streamlit app that transforms Netflix viewing history into clear insights about user behavior, binge patterns, and content preferences.
 
 🚀 Features
