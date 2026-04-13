@@ -6,9 +6,9 @@ import totaltime
 import streamlit as st
 from PIL import Image
 st.title('Netflix Activity Analysis',text_alignment='center')
-img=Image.open(r'C:\Users\there\OneDrive\Documents\VSCODEDS\netflixpy\netflix.jpg')
+img=Image.open(r'netflix.jpg')
 st.image(img)
-df=pd.read_csv(r"C:\Users\there\OneDrive\Documents\ViewingActivity.csv")
+df=pd.read_csv(r"ViewingActivity.csv")
 df=df.loc[df['Supplemental Video Type'].isna()==True]
 df['Duration']=pd.to_timedelta(df['Duration'])
 df['Start Time']=pd.to_datetime(df['Start Time'])
