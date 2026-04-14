@@ -55,3 +55,8 @@ This project demonstrates:
 - Enhance UI with filters and interactivity
 - Deploy advanced recommendation insights
 
+<img width="1865" height="871" alt="Screenshot 2026-04-14 114305" src="https://github.com/user-attachments/assets/3e8dc111-0b8a-462a-a4ac-93ff875c1820" />
+
+<img width="1886" height="865" alt="Screenshot 2026-04-14 114327" src="https://github.com/user-attachments/assets/1f5e8bf4-0379-4db0-b438-bea3c9b60339" />
+
+
