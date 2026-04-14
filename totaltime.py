@@ -24,7 +24,7 @@ def dgraphs(d):
         else:
             time[i]=f'{i-12} pm'
     d['hour']=d['hour'].map(time)
-    d['hour']=pd.Categorical(d['hour'],categories=time.values(),ordered=True)
+    d['hour']=pd.Categorical(d['hour'],categories=list(time.values()),ordered=True)
     h=d['hour'].value_counts().sort_index()
     dayf=pd.pivot_table(data=d,index='day',columns='hour',values='Title',aggfunc='count')
     return dayf
