@@ -51,7 +51,7 @@ if option:
         dayf=totaltime.dgraphs(d[name])
         fig,ax=plt.subplots(figsize=(10,6))
         sns.heatmap(dayf,cmap='YlGnBu',ax=ax)
-        ax.set_xticklabels(ax.get_xticklabels(), rotation=0)
+        ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
         ax.set_yticklabels(ax.get_yticklabels(), rotation=0)
         ax.set_title("Viewing Activity (Hours vs Weekdays)")
         st.pyplot(fig)
