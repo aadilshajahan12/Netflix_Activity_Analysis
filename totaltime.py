@@ -17,7 +17,14 @@ def dgraphs(d):
     d['day']=d['day'].map(days)
     d['day']=pd.Categorical(d['day'],categories=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],ordered=True)
     f=d['day'].value_counts().sort_index()
-    d['hour']=pd.Categorical(d['hour'],categories=[i for i in range(24)],ordered=True)
+    time={0:'12 am'}
+    for i in range(1,24):
+        if i < 13:
+            time[i]=f'{i} am'
+        else:
+            time[i]=f'{i-12} pm'
+    d['hour']=d['hour'].map(time)
+    d['hour']=pd.Categorical(d['hour'],categories=[time.values()],ordered=True)
     h=d['hour'].value_counts().sort_index()
     dayf=pd.pivot_table(data=d,index='day',columns='hour',values='Title',aggfunc='count')
     return dayf
