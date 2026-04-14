@@ -19,10 +19,12 @@ def dgraphs(d):
     f=d['day'].value_counts().sort_index()
     time={0:'12 am'}
     for i in range(1,24):
-        if i < 13:
+        if i < 12:
             time[i]=f'{i} am'
-        else:
+        elif i>12:
             time[i]=f'{i-12} pm'
+        else :
+            time[i]=f'{i} pm'
     d['hour']=d['hour'].map(time)
     d['hour']=pd.Categorical(d['hour'],categories=list(time.values()),ordered=True)
     h=d['hour'].value_counts().sort_index()
